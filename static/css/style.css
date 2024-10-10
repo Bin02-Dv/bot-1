@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+.conn header{
+    background-color: #005B96;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.conn header ul{
+    padding: 5px;
+}
+
+.conn header img{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+
+.conn .bot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.conn .bot span{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
+.conn main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conn .body{
+    height: 69vh;
+    width: 80%;
+    background-color: #005B96;
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.conn .body .bot-chat{
+    padding: 20px;
+    background-color: #078fe9;
+    color: #fff;
+    margin-bottom: 9px;
+    border-radius: 9px;
+}
+
+.conn .body .user-chat{
+    padding: 20px;
+    background-color: #011c2e;
+    color: #fff;
+    text-align: end;
+    border-radius: 9px;
+    margin-bottom: 9px;
+}
+
+.conn .body .chat-input{
+    padding: 20px;
+    background-color: #0e2d42;
+    color: #fff;
+    border-radius: 9px;
+    position: absolute;
+    bottom: 40px;
+    left: 500px; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+.conn .body .chat-input input{
+    width: 90%;
+    font-size: 20px;
+    border: none;
+    background: transparent;
+    outline: none;
+    text-align: center;
+    color: #fff;
+}
+
+.conn .body .chat-input input::placeholder{
+    font-style: italic;
+}
+
+.conn .body .chat-input button{
+    background-image: url(../img/sent.png);
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+
+
+@media screen and (max-width: 1280px) {
+    .conn .body .chat-input{
+        position: fixed;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .conn .body{
+        height: 60vh;
+    }
+}
+@media screen and (max-width: 912px) {
+    .conn .body .chat-input{
+        position: fixed;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .conn .body{
+        height: 80vh;
+    }
+}
+@media screen and (max-width: 820px) {
+    .conn .body .chat-input{
+        position: fixed;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .conn .body{
+        height: 77vh;
+    }
+}
+@media screen and (max-width: 540px) {
+    .conn .body .chat-input{
+        position: fixed;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+    }
+
+    .conn .body{
+        height: 72vh;
+    }
+
+    .conn header img{
+        height: 50px;
+        width: 50px;
+    }
+}
+@media screen and (max-width: 412px) {
+    .conn .body .chat-input{
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+    }
+
+    .conn .body{
+        height: 77vh;
+    }
+
+    .conn header img{
+        height: 50px;
+        width: 50px;
+    }
+}
+@media screen and (max-width: 414px) {
+    .conn .body .chat-input{
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+    }
+
+    .conn .body{
+        height: 77vh;
+    }
+
+    .conn header img{
+        height: 50px;
+        width: 50px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .conn .body .chat-input{
+        position: fixed;
+        bottom: 3px;
+        left: 0;
+        width: 100%;
+    }
+
+    .conn .body{
+        height: 71vh;
+    }
+}
+
+@media screen and (max-width: 344px) {
+    .conn .body .chat-input{
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+    }
+
+    .conn .body{
+        height: 77vh;
+    }
+}

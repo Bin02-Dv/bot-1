@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static '/css/login-style.css' %}">
+</head>
+<body>
+    <div class="con">
+        <form id="login">
+            <h2>
+                <span>SIGNUP</span>
+                <img src="{% static 'img/ai-logo.jpg' %}" alt="">
+            </h2>
+            <label for="email">Email</label>
+            <span id="emailVal"></span>
+            <div class="row">
+                <input type="email" name="" id="email">
+            </div>
+            <label for="password">Password</label>
+            <div class="row">
+                <input type="password" name="" id="password">
+            </div>
+            <label for="confirmpassword">Confirm Password</label>
+            <div class="row">
+                <input type="password" name="" id="cpassword">
+            </div>
+            <div class="check">
+                <input type="checkbox" name="" id="">
+                <span>Remember me?</span>
+            </div>
+            <div class="btn">
+                <button>LOGIN</button>
+            </div>
+            <div class="next">
+                <span>OR</span>
+                <div class="strike"></div>
+            </div>
+            <div class="footer">
+                <i class="fa fa-google"></i>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+
+            <div class="nav">
+                <span>Already have an account? <a href="">LOGIN</a></span>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
