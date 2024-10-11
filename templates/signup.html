@@ -4,36 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static '/css/login-style.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/ai-logo.jpg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/loader.css' %}">
 </head>
 <body>
     <div class="con">
-        <form id="login">
+        <form id="signup" method="post">
+            {% csrf_token %}
             <h2>
                 <span>SIGNUP</span>
                 <img src="{% static 'img/ai-logo.jpg' %}" alt="">
             </h2>
-            <label for="email">Email</label>
-            <span id="emailVal"></span>
             <div class="row">
-                <input type="email" name="" id="email">
+                <div class="alert-danger"></div>
+                <div class="alert-success"></div>
+            </div>
+            <label for="email">Email</label>
+            <div class="row">
+                <input type="email" name="email" id="email" required>
+            </div>
+            <label for="username">Username</label>
+            <div class="row">
+                <input type="text" name="username" id="username" required>
             </div>
             <label for="password">Password</label>
             <div class="row">
-                <input type="password" name="" id="password">
+                <input type="password" name="password" id="password" required>
             </div>
             <label for="confirmpassword">Confirm Password</label>
             <div class="row">
-                <input type="password" name="" id="cpassword">
+                <input type="password" name="cpassword" id="cpassword" required>
             </div>
             <div class="check">
                 <input type="checkbox" name="" id="">
                 <span>Remember me?</span>
             </div>
             <div class="btn">
-                <button>LOGIN</button>
+                <button>SIGNUP</button>
             </div>
             <div class="next">
                 <span>OR</span>
@@ -46,10 +56,57 @@
             </div>
 
             <div class="nav">
-                <span>Already have an account? <a href="">LOGIN</a></span>
+                <span>Already have an account? <a href="/login">LOGIN</a></span>
             </div>
         </form>
     </div>
 
+    <div class="loader"></div>
+
+    <script src="{% static 'js/JQ.js' %}"></script>
+    <script src="{% static 'js/loader.js' %}"></script>
+
+    <script>
+        // ajax
+        $(document).on('submit', '#signup', function (e){
+            e.preventDefault();
+            var green = $(".alert-success");
+            var red = $(".alert-danger");
+            var loader = document.querySelector('.loader');
+            var formData = new FormData(this);
+
+            loader.classList.remove("loader-hidden");
+            $.ajax({
+                type: 'POST',
+                url: '/signup/',
+                data: formData,
+                processData: false, // Ensure data is not processed for FormData
+                contentType: false, // Ensure proper content type for FormData
+                success: function (response){
+                    var success = response['success'];
+                    if(success){
+                        // NORMAL ALERT warning, error, success
+                        red.removeClass("block");
+                        green.html('');
+                        green.addClass("block");
+                        green.append(response['message']);
+                        loader.classList.add("loader-hidden");
+                        window.location.href = '/login/';
+                    }else{
+                        green.removeClass("block");
+                        red.html('');
+                        red.addClass("block");
+                        red.append(response['message']);
+                        loader.classList.add("loader-hidden");
+                    }
+
+                    // const con = document.querySelector('.conn');
+                    // if (con) {
+                    //     con.scrollTo({ top: 0, behavior: 'smooth' });
+                    // }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

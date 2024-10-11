@@ -118,7 +118,7 @@
         height: 60vh;
     }
 }
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 908px) {
     .conn .body .chat-input{
         position: fixed;
         bottom: 5px;
@@ -128,10 +128,10 @@
     }
 
     .conn .body{
-        height: 80vh;
+        height: 73vh;
     }
 }
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 828px) {
     .conn .body .chat-input{
         position: fixed;
         bottom: 5px;
@@ -141,7 +141,20 @@
     }
 
     .conn .body{
-        height: 77vh;
+        height: 70vh;
+    }
+}
+@media screen and (max-width: 720px) {
+    .conn .body .chat-input{
+        position: fixed;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .conn .body{
+        height: 71vh;
     }
 }
 @media screen and (max-width: 540px) {
@@ -170,7 +183,7 @@
     }
 
     .conn .body{
-        height: 77vh;
+        height: 71vh;
     }
 
     .conn header img{
@@ -187,12 +200,24 @@
     }
 
     .conn .body{
-        height: 77vh;
+        height: 71vh;
     }
 
     .conn header img{
         height: 50px;
         width: 50px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .conn .body .chat-input{
+        position: fixed;
+        bottom: 3px;
+        left: 0;
+        width: 100%;
+    }
+
+    .conn .body{
+        height: 71vh;
     }
 }
 @media screen and (max-width: 375px) {

@@ -25,6 +25,13 @@ form{
     padding: 50px;
 }
 
+#signup{
+    box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .3);
+    height: 100vh;
+    width: 25%;
+    padding: 50px;
+}
+
 img{
     height: 90px;
     width: 90px;
@@ -108,8 +115,46 @@ img{
     text-align: center;
 }
 
+.alert-danger{
+    background-color: rgba(254, 60, 86, 0.586);
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid red;
+    font-size: 20px;
+    color: rgb(64, 2, 2);
+    display: none;
+}
+
+.alert-success{
+    background-color: rgba(6, 167, 94, 0.586);
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid rgba(2, 103, 58, 0.586);
+    font-size: 20px;
+    color: rgba(1, 36, 20, 0.758);
+    display: none;
+}
+
+.alert-danger.block {
+    display: block;
+}
+
+.alert-success.block {
+    display: block;
+}
+
 @media screen and (max-width: 1024px) {
     form{
+        height: 100vh;
+        width: 89%;
+        padding: 300px 20px 200px 20px;
+    }
+
+    #signup{
         height: 100vh;
         width: 89%;
         padding: 300px 20px 200px 20px;
@@ -121,9 +166,19 @@ img{
         width: 89%;
         padding: 20px;
     }
+    #signup{
+        height: 100vh;
+        width: 89%;
+        padding: 20px;
+    }
 }
 @media screen and (max-width: 375px) {
     form{
+        height: 100vh;
+        width: 89%;
+        padding: 300px 20px 200px 20px;
+    }
+    #signup{
         height: 100vh;
         width: 89%;
         padding: 300px 20px 200px 20px;
